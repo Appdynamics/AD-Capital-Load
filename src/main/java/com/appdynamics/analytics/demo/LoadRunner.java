@@ -39,7 +39,7 @@ public class LoadRunner {
 
     private void sleep() {
         try {
-            Thread.currentThread().sleep(100);
+            Thread.currentThread().sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -53,13 +53,11 @@ public class LoadRunner {
 
 
     private static void parseArgs(String[] args) {
-        if (args.length < 3) {
-            System.out.println("Usage: portalurl processorurl portalport processorport");
-        }
+        logger.info(args[0] + " " + args[1]);
         portalUrl = args[0];
         processorUrl = args[1];
-        portalPort = Integer.parseInt(args[2]);
-        processorPort = Integer.parseInt(args[3]);
+        portalPort = 8080;
+        processorPort = 8080;
     }
     private static void callPortalAuthenticate(String portalUrl, int portalPort){
         try {
