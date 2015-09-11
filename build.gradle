@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin:'application'
+
+mainClassName='LoadRunner';
+
+
+version ='';
+repositories {
+    mavenCentral()
+}
+
+distZip {
+    doLast {
+        file("$destinationDir/$archiveName").renameTo("$destinationDir/"+'load-generator'+version+'.zip');
+    }
+}
