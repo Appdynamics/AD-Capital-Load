@@ -39,7 +39,7 @@ public class LoadRunner {
 
     private void sleep() {
         try {
-            Thread.currentThread().sleep(500);
+            Thread.currentThread().sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
