@@ -61,7 +61,7 @@ public class LoadRunner {
     }
     private static void callPortalAuthenticate(String portalUrl, int portalPort){
         try {
-            URL myURL = new URL("http://" + portalUrl + ":" + portalPort + "/portal/Authenticate");
+            URL myURL = new URL("http://" + portalUrl + ":" + portalPort + "/portal/CustomerLogin");
             URLConnection myURLConnection = myURL.openConnection();
             // open the stream and put it into BufferedReader
             BufferedReader br = new BufferedReader(
