@@ -69,12 +69,12 @@ public class LoadRunner implements Runnable {
         if(args.length > 2){
             users = Integer.parseInt(args[2]);
         } else {
-            users = 50;
+            users = 40;
         }
         if(args.length > 3){
             sleepTimeInMillis = Integer.parseInt(args[3]);
         } else {
-            sleepTimeInMillis = 150;
+            sleepTimeInMillis = 250;
         }
         portalPort = 8080;
         processorPort = 8080;
