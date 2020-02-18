@@ -31,8 +31,11 @@ public class LoadRunner implements Runnable {
     public void run() {
         while (true) {
             callPortalAuthenticate(portalUrl,portalPort);
+            sleep();
             callPortalSubmitApplication(portalUrl, portalPort);
+            sleep();
             callProcessorCreditCheck(processorUrl, processorPort);
+            sleep();
             callProcessorUnderWrite(processorUrl, processorPort);
             sleep();
         }
