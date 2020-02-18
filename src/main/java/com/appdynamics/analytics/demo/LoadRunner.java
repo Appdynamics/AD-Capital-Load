@@ -1,5 +1,8 @@
 package com.appdynamics.analytics.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,13 +10,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.CountDownLatch;
-import java.util.logging.Logger;
 
 /**
  * Load-Gen for jsp
  */
 public class LoadRunner implements Runnable {
-    static final Logger logger = Logger.getLogger(LoadRunner.class.getName());
+    static final Logger logger = LoggerFactory.getLogger(LoadRunner.class);
 
     private static int processorPort;
     private static int portalPort;
@@ -93,10 +95,10 @@ public class LoadRunner implements Runnable {
             br.close();
         }
         catch (MalformedURLException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
         catch (IOException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
     private static void callPortalSubmitApplication(String portalUrl, int portalPort){
@@ -113,10 +115,10 @@ public class LoadRunner implements Runnable {
             br.close();
         }
         catch (MalformedURLException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
         catch (IOException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 
@@ -135,10 +137,10 @@ public class LoadRunner implements Runnable {
             br.close();
         }
         catch (MalformedURLException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
         catch (IOException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 
@@ -156,10 +158,10 @@ public class LoadRunner implements Runnable {
             br.close();
         }
         catch (MalformedURLException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
         catch (IOException e) {
-            logger.warning(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 }
