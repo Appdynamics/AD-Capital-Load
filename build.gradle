@@ -9,6 +9,13 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.13.0'
+
+}
+
 distZip {
     doLast {
         file("$destinationDir/$archiveName").renameTo("$destinationDir/"+'load-generator'+version+'.zip');
